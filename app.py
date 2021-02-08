@@ -11,7 +11,6 @@ def index():
     elif request.method == "POST":
         return populatePageWithNewMovie()
 
-@app.route('/newMovie', methods=["POST"])
 def populatePageWithNewMovie():
     #print(getRandomMovie())
     new_movie = get_random_movie()
