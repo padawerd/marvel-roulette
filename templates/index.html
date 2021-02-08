@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Marvel Roulette</title>
+</head>
+<body>
+   <h1>What Marvel Movie Should I Watch?</h1>
+   <!--<button>Roll the Dice!</button>-->
+   <form method="POST" action="/newMovie">
+       <input type="submit" value="Roll the Dice!">
+   </form>
+   {% if movie %}
+   <h2>{{movie}}</h2>
+   {% endif %}
+</body>
+</html>
