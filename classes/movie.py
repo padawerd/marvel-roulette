@@ -48,7 +48,7 @@ class Movie:
 
     @classmethod
     def ant_man(cls):
-        return cls("Ant-man")
+        return cls("Ant-Man")
 
     @classmethod
     def captain_america_3(cls):
