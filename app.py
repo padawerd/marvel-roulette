@@ -1,12 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from random import sample
 from classes.movie import Movie
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
-    return render_template('index.html')
+    if request.method == "GET":
+        return render_template("index.html")
+    elif request.method == "POST":
+        return populatePageWithNewMovie()
 
 @app.route('/newMovie', methods=["POST"])
 def populatePageWithNewMovie():
